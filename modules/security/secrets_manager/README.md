@@ -31,10 +31,10 @@ Below are examples of calling this module with both default and custom values.
 ```
 module "dev_rds_username_password" {
   source       = "./modules/security/secrets_manager"
-  secret_name  = "dev_dev_rds_username"
+  secret_name  = "dev_rds_username"
   secret_value = "Some Secret Value. Do not Hardcode here"
   secret_tags = {
-    Name = "dev_dev_rds_username"
+    Name = "dev_rds_username"
   }
 }
 ```
@@ -44,12 +44,12 @@ module "dev_rds_username_password" {
 ```
 module "dev_rds_username_password" {
   source                = "./modules/security/secrets_manager"
-  secret_name           = "dev_dev_rds_username"
+  secret_name           = "dev_rds_username"
   secret_retention      = 10
   secret_replica_region = "us-west-1"
   secret_value          = "Some Secret Value. Do not Hardcode here"
   secret_tags = {
-    Name = "dev_dev_rds_username"
+    Name = "dev_rds_username"
   }
 }
 ```
