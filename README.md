@@ -1,2 +1,91 @@
-# terraform-aws-modules
-Modules for AWS Landing Zone Deployment
+# Introduction 
+
+To be filled
+
+# List of Modules
+
+- Network
+    - [VPC](./modules/network/vpc/README.md)
+        - [Peering](./modules/network/vpc/peering/README.md)
+        - [DHCP Option](./modules/network/vpc/dhcp_option/README.md)
+            - [VPC Association](./modules/network/vpc/dhcp_option/vpc_association/README.md)
+        - [Subnet](./modules/network/vpc/subnet/README.md)
+        - [Internet Gateway](./modules/network/vpc/igw/README.md)
+        - [Route Table](./modules/network/vpc/route_table/README.md)
+            - Association
+                - [Subnet](./modules/network/vpc/route_table/association/subnet/README.md)
+                - [Gateway](./modules/network/vpc/route_table/association/gateway/README.md)
+            - [Route](./modules/network/vpc/route_table/route/README.md)
+        - [Elastic IP](./modules/network/vpc/eip/README.md)
+        - Endpoint
+            - [Gateway](./modules/network/vpc/endpoints/gateway/README.md)
+            - [Interface](./modules/network/vpc/endpoints/interface/README.md)
+        - NAT Gateway
+            - [Private](./modules/network/vpc/nat_gateway/private/README.md)
+            - [Public](./modules/network/vpc/nat_gateway/public/README.md)
+    - Security
+        - [Network ACL](./modules/network/security/nacl/README.md)
+            - [Rules](./modules/network/security/nacl/rules/README.md)
+        - [Security Group](./modules/network/security/sg/README.md)
+            - [Rules](./modules/network/security/sg/rules/README.md)
+    - [Network Firewall](./modules/network/security/firewall/README.md)
+    - [VPN Gateway](./modules/network/vpn/README.md)
+        - [Customer Gateway](./modules/network/vpn/customer_gateway/README.md)
+        - [Connection](./modules/network/vpn/connection/README.md)
+- Compute
+    - [Instance](./modules/compute/ec2/instance/README.md)
+        - [EBS Attachment](./modules/compute/ec2/instance/ebs_attachment/README.md)
+    - Load Balancer
+        - [Internal](./modules/compute/ec2/lb/internal/README.md)
+        - [External](./modules/compute/ec2/lb/external/README.md)
+        - [Application](./modules/compute/ec2/lb/application/README.md)
+        - [Target Group](./modules/compute/ec2/lb/target_group/README.md)
+            - [Attachment](./modules/compute/ec2/lb/target_group/attachment/README.md)
+        - Listener
+            - [Forward](./modules/compute/ec2/lb/listener/forward/README.md)
+            - [Redirect](./modules/compute/ec2/lb/listener/redirect/README.md)
+- Storage
+    - [Simple Storage Service](./modules/storage/s3/README.md)
+        - [Object](./modules/storage/s3/object/README.md)
+    - [Elastic Block Storage Volume](./modules/storage/ebs/README.md)
+- Administration
+    - [Organization Unit](./modules/administration/organizational_unit/README.md)
+    - [Account](./modules/administration/accounts/README.md)
+    - [Control Tower](./modules/administration/control_tower/README.md)
+    - [Organization Policy](./modules/policy/README.md)
+- Identity
+    - [Role](./modules/identity/iam/role/README.md)
+        - [Role Policy](./modules/identity/iam/role/policy/README.md)
+    - [Policy](./modules/identity/iam/policy/README.md)
+        - [Attachment](./modules/identity/iam/policy/attachment/README.md)
+    - User Management
+        - [Users](./modules/identity/iam/management/user/README.md)
+            - [Group Membership](./modules/identity/iam/management/user/membership/README.md)
+            - [Policy Attachment](./modules/identity/iam/management/user/attachment/README.md)
+        - [Group](./modules/identity/iam/management/group/README.md)
+            - [User Membership](./modules/identity/iam/management/group/membership/README.md)
+            - [Policy Attachment](./modules/identity/iam/management/group/attachment/README.md)
+    - [Instance Profile](./modules/identity/iam/instance_profile/README.md)
+- Security
+    - [Security Hub](./modules/security/security_hub/README.md)
+        - [Admin Account](./modules/security/security_hub/admin_account/README.md)
+        - [Member Account](./modules/security/security_hub/member_account/README.md)
+        - [Standard Controls](./modules/security/security_hub/standard_controls/README.md)
+        - [Standard Subscriptions](./modules/security/security_hub/standard_subscription/README.md)
+        - [Finding Aggregator](./modules/security/security_hub/finding_aggregator/README.md)
+    - Config
+        - [Recorder](./modules/security/config/recorder/README.md)
+            - [Status](./modules/security/config/recorder/status/README.md)
+        - [Delivery Channel](./modules/security/config/delivery_channel/README.md)
+        - Aggregator
+            - [Account](./modules/security/config/aggregator/account/README.md)
+            - [Organization](./modules/security/config/aggregator/organization/README.md)
+        - [Rule](./modules/security/config/rule/README.md)
+        - [Conformance Pack](./modules/security/config/conformance_pack/README.md)
+    - [Secrets Manager](./modules/security/secrets_manager/README.md)
+- Monitoring
+    - Cloudwatch
+        - [Log Group](./modules/monitoring/cloudwatch/log_group/README.md)
+        - [Log Stream](./modules/monitoring/cloudwatch/log_stream/README.md)
+        - [Log Resource Policy](./modules/monitoring/cloudwatch/resource_policy/README.md)
+- [Backup](./modules/backup/README.md)
